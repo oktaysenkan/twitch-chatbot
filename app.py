@@ -1,5 +1,5 @@
-from Socket import sendMessage
-from Initialaze import Initialaze
+from utils import sendMessage
+from client import Client
 
 def onMessageRecieved(nickname, message, socket):
   print(nickname + ": " + message)
@@ -14,5 +14,5 @@ def onMessageRecieved(nickname, message, socket):
   elif "!raffle" in message:
     sendMessage(socket, "@" + nickname + " SantaHat 70cl Yeni Rakı yılbaşı çekilişine katıldınız.")
 
-client = Initialaze(onMessageRecieved)
+client = Client(onMessageRecieved)
 client.connect()

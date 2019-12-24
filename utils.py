@@ -1,4 +1,5 @@
 import string
+from settings import CHANNEL
 
 def getUser(line):
   try:
@@ -15,3 +16,8 @@ def getMessage(line):
     return message
   except:
     return None
+
+def sendMessage(s, message):
+  messageTemp = "PRIVMSG #" + CHANNEL + " :" + message
+  s.send((messageTemp + "\r\n").encode())
+  print("Sent: " + messageTemp)

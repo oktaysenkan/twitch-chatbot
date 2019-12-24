@@ -1,9 +1,8 @@
 import string
-from Socket import sendMessage
-from Socket import openSocket, sendMessage
-from Read import getUser, getMessage
+from Socket import openSocket
+from utils import getUser, getMessage
 
-class Initialaze:
+class Client:
   def __init__(self, listener):
     self.socket = openSocket()
     self.listener = listener
