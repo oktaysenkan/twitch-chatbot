@@ -6,7 +6,7 @@ def getUser(line):
     user = seperate[1].split("!", 1)[0]
     return user
   except:
-    return "Unknown error"
+    return None
 
 def getMessage(line):
   try:
@@ -14,4 +14,4 @@ def getMessage(line):
     message = seperate[2]
     return message
   except:
-    return "Unknown error"
+    return None
